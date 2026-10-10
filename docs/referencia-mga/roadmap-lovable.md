@@ -1,0 +1,23 @@
+# Roadmap
+
+- [x] Renomear a apresentação da comunidade no chat.
+- [x] Transformar links de aulas em cartões validados e registrar cliques.
+- [x] Validar as três perguntas solicitadas no preview.
+- [x] Regenerar todos os ícones PWA e o favicon com o logo Jornada Hydra.
+- [x] Conferir visualmente cada arquivo e validar tamanhos/arquivos servidos.
+- [x] Payt: adapter, mapeamento, precedência Hubla, 3 testes (secret aguardando o formulário)
+- [x] 7D: pergunta hipotética → Rota 5; contador de insistência; testes a/b/c
+- [x] Mover a fila de Ativação Hydra para uma seção própria com contador imediato.
+- [x] Corrigir a rolagem única em todas as seções do painel administrativo.
+- [x] Impedir Endpoint Vermelho em perguntas hipotéticas e reabrir estados antigos abaixo de 4/4.
+- [x] Bloquear o Endpoint Vermelho na saída final, auditar a decisão e validar a sequência real completa.
+- [x] Impedir qualquer quebra dentro de URLs e garantir cartões para todos os links oficiais.
+- [x] Restaurar os três botões em toda proposta da Rota 5, com a insistência preservada.
+- [x] Garantir aceite e recusa em toda proposta do 7D, com rótulos literais do board.
+- [x] Dividir a proposta de 7 dias em duas mensagens consecutivas.
+- [x] Investigar compradores antigos ausentes e requisitos das consultas Cademí/Hubla, sem alterar dados.
+- [x] Painel de conversas: contagem, vazias ocultas, paginação, agrupadas por pessoa, exportação por pessoa e copiar nome/e-mail.
+- [x] Alertas agrupados por pessoa (contador conta pessoas).
+- [x] Ativação Hydra: abas "Aceitaram" (só clique exato) e "Possíveis retenções".
+- [x] Assumir conversa: pausa do bot por conversa, mensagem/anexo da equipe, devolver ao bot, etiqueta e histórico.
+- [x] Relatórios automáticos: classificação horária, API 08h/17h, aba Relatórios, envio WhatsApp (aguarda segredos).
