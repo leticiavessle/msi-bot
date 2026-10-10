@@ -8,6 +8,42 @@ Projeto feito fora do Lovable em 04/10/2026, a partir do código baixado do Lova
 (original intocado em `/Users/leticiavessle/MGA - bot/codigo-lovable-original`).
 TanStack Start + React + Supabase, compilado para Cloudflare Workers (Nitro). Tudo em português.
 
+## Com quem você está falando
+
+A responsável pelo projeto projetou o produto e usa IA com desenvoltura, mas não programa e não conhece banco de dados.
+
+- Fale em português simples, sem jargão. Diga o que muda para a aluna ou para a equipe, não o que mudou no código.
+- Não peça para ela ler código, rodar comando ou escolher entre opções técnicas. Decida você e explique em uma frase.
+- Pergunte só o que for decisão de produto (texto, regra, comportamento, visual).
+- Antes de mexer, repita em uma ou duas frases o que entendeu do pedido. Se o pedido for ambíguo, pergunte.
+- Ao terminar, diga o que foi feito, como ela testa e o que ficou de fora.
+- Nunca diga que funcionou sem ter rodado a verificação. Se algo falhou, diga claramente.
+
+## Como o trabalho anda
+
+1. Toda mudança é feita em um ramo novo, nunca direto no `main`.
+2. `/previa` verifica, envia ao GitHub e diz como testar.
+3. Ela testa. Só depois de ela confirmar, `/publicar` junta a mudança ao `main`.
+4. Se algo der errado depois, `/desfazer` volta à versão anterior.
+
+O bot ainda não está publicado (10/10/2026): o que falta está no `ENTREGA-PARA-O-DEV.md`. Até lá, o teste é local
+(`npm run dev`, porta 8080) e o `main` é a versão que vai ao ar quando o Thiago publicar. Depois de publicado, o `main`
+passa a ser o que as alunas veem e o teste passa a ser no link de prévia do pull request.
+
+## Pare e chame o Thiago
+
+Nestes casos, explique para ela o motivo em linguagem simples, deixe o trabalho preparado no ramo e não publique:
+
+- Qualquer mudança no banco: `supabase/migrations/`, `supabase/agendamentos.sql`, tabela ou coluna nova, SQL, RLS.
+  Não rode SQL nem comandos do Supabase.
+- Variáveis de ambiente, chaves, segredos, tokens, configuração da hospedagem, do Supabase ou de domínio.
+- Login e entrada no bot: `src/lib/dr/access*`, `identificacao.ts`, `admin-guard.ts`,
+  `src/routes/_authenticated/route.tsx`, `src/integrations/`.
+- Webhooks de compra e reembolso: `src/lib/dr/webhooks.server.ts`, `src/routes/api/public/webhooks/`.
+- Quem tem acesso ao bot: `DA_OFERTA_RE` e `SEM_ACESSO_RE` em `src/oferta/produtos.ts`.
+- Apagar ou alterar em massa dados de alunas.
+- Um teste existente que só passa se for alterado ou removido. Teste falhando é sinal de regra quebrada, não de teste errado.
+
 ## Onde fica cada coisa
 - `src/oferta/` — TUDO que muda de uma oferta para outra (marca, produtos, links, aulas, atalhos,
   respostas oficiais, textos do 7D, vocabulário, relatórios e os 4 blocos do prompt em `prompt/*.md`).
